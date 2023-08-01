@@ -1,0 +1,37 @@
+.img_pgraph{
+    font-size: 60px;
+    margin-top: -400px;
+    margin-left: 800px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.carousel{
+height: 550px;
+}
+.fashion{
+    justify-content:center;
+    display: flex;
+    height: 388px;
+}
+.men-img{
+    height: 290px;
+    width: 290px;
+    box-shadow: 1px 1px 1px 2px black;
+    transform: scale(1.1);
+}
+
+.women-img{
+    height: 290px;
+    width: 290px;
+    box-shadow: 1px 1px 1px 2px black;
+    transform: scale(1.1);
+
+}
+.kid-img{
+    height: 290px;
+    width: 290px;
+    box-shadow: 1px 1px 1px 2px black;
+    transform: scale(1.1);
+
+}

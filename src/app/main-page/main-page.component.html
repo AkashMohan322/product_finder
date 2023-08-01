@@ -1,0 +1,81 @@
+<!-- {{product|json}} -->
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/5864245/pexels-photo-5864245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="carousel d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="img_pgraph">Upto 70% Off On Over 1000 styles</h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class=" carousel d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/3987350/pexels-photo-3987350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class=" carousel  w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="fashion">
+  <div class="card text-bg-dark m-5 ">
+    <img src="https://nextluxury.com/wp-content/uploads/mens-fashion-urban-style.jpg" class="men-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Men's Fashion</h5>
+    </div>
+  </div>
+  <div class="card text-bg-dark m-5">
+    <img src="https://3.bp.blogspot.com/-i7vq8QDThrk/UrFEpAvUn_I/AAAAAAAAAPs/bVui-sjmtYQ/s1600/Women+Fashion+(1).jpeg" class="women-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Women's Fashion</h5>
+    </div>
+  </div>
+  <div class="card text-bg-dark m-5">
+    <img src="https://th.bing.com/th/id/R.3552953b7e7f50d1f6826a9cb5b0ab3f?rik=OzPFCViAcxZBmA&riu=http%3a%2f%2fdress-trends.com%2fwp-content%2fuploads%2f2016%2f11%2f%d0%9aids-fashion-trends-and-tendencies-2017-kids-clothes-kids-wear-4.jpg&ehk=RouF4aCPW076xlwYWPYbvNmyj8MdMN44zGD4CQs1Hv8%3d&risl=&pid=ImgRaw&r=0" class="kid-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Kid's Fashion</h5>
+    </div>
+  </div>
+</div>
+
+<div style="padding-left: 200px;" class="searchbutton m-4 d-flex">
+  <div>
+  <input (keyup)="search($event)" style="width: 1000px;" type="text" placeholder="Search Products" class="form-control shadow border-2 border-dark">
+</div>
+  <div style="margin-top: 5px;">
+  <i  style="margin-left: -28px;" class="searchicon fa-solid fa-magnifying-glass fa-xl"></i>
+</div>
+</div>
+
+<div style="margin-left: 160px;" class="d-flex flex-wrap">
+  <div class="card shadow m-5" style="width: 18rem;" *ngFor="let products of product |filter:searchProduct:'title'" >
+    <img style="padding: 10px;" [src]="products.image" class="card-img-top" alt="..." width="100%" height="250px">
+    <div class="card-body">
+      <p class="card-text">{{products.title}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">MRP: {{products.price}}</li>
+      <li class="list-group-item">Rating: {{products.rating.rate}}</li>
+    </ul>
+    <div class="card-body">
+      <button class="m-2 btn btn-danger" routerLink="/mainPage/view/{{products.id}}">View Product</button>
+      <button class="m-2 btn btn-warning">Buy Now</button>
+    </div>
+  </div>
+</div>
